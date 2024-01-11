@@ -41,7 +41,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 ## Answer
 
-package fr.istic.vv;
+    package fr.istic.vv;
     import java.util.ArrayList;
     import java.util.Comparator;
     import java.util.NoSuchElementException;
