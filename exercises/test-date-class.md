@@ -53,3 +53,43 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1. Input Space Partitioning :
+
+Characteristics and Partition Blocks : Date(int day, int month, int year)
+- Valid date (common with isValidDate method)
+- Invalid date (common with isValidDate method)
+
+Characteristics and Partition Blocks : isValidDate(int day, int month, int year)
+Valid date
+- Partition 1 : Normal valid date
+- Partition 2 : Leap year date (common with isLeapYear method)
+        
+Invalid date
+- Partition 3 : Invalid day
+- Partition 4 : Invalid month
+- Partition 5 : Invalid year
+
+Characteristics and Partition Blocks : isLeapYear(int year)
+- Leap year
+- Non-leap year
+
+Characteristics and Partition Blocks : nextDate() and previousDate()
+- Normal date
+- Edge cases (start or end of a month, year)
+
+Characteristics and Partition Blocks : compareTo(Date other)
+- Date is posterior to other
+- Date is anterior to other
+- Date is the same as other
+- other is null
+
+2. Code dans la classe de tests.
+
+3. Logic Coverage Evaluation (Base Choice Coverage):
+
+Le code des fonctions sont relativement simples, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons vérifier que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
+
+4. PIT Mutation Testing:
+
+Execution de PIT (mutation testing) sur les suites de tests existantes.
+
