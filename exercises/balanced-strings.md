@@ -26,3 +26,81 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+Code de la méthode isBalanced(String str) :
+
+    public static boolean isBalanced(String str) {
+    
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : str.toCharArray()) {
+            if (ch == '(' || ch == '[' || ch == '{') {
+                stack.push(ch);
+            } else if (ch == ')' && !stack.isEmpty() && stack.peek() == '(') {
+                stack.pop();
+            } else if (ch == ']' && !stack.isEmpty() && stack.peek() == '[') {
+                stack.pop();
+            } else if (ch == '}' && !stack.isEmpty() && stack.peek() == '{') {
+                stack.pop();
+            } else {
+                return false; // Unmatched closing bracket or other characters
+            }
+        }
+        return stack.isEmpty(); // If stack is empty, all brackets were balanced
+    }
+
+1. Input Space Partitioning :
+
+   Presence of Symbols:
+   - Partition 1: String with no symbols (Empty String).
+    -Partition 2: String with balanced symbols.
+   - Partition 3: String with unbalanced symbols.
+
+   Types of Symbols:
+   - Partition 4: String with only curly braces {}.
+   - Partition 5: String with only square brackets [].
+   - Partition 6: String with only parentheses ().
+
+   Combination of Symbols:
+   - Partition 7: String with a combination of balanced symbols.
+   - Partition 8: String with a combination of unbalanced symbols.
+
+2. Statement Coverage Evaluation :
+
+
+    @Test
+    public void testIsBalanced() {
+    
+    // Partition 1: Empty String
+    assertTrue(isBalanced(""));
+
+    // Partition 2: String with balanced symbols
+    assertTrue(isBalanced("{[]()}"));
+
+    // Partition 3: String with unbalanced symbols
+    assertFalse(isBalanced("([)]"));
+
+    // Partition 4: String with only curly braces
+    assertTrue(isBalanced("{}"));
+
+    // Partition 5: String with only square brackets
+    assertTrue(isBalanced("[]"));
+
+    // Partition 6: String with only parentheses
+    assertTrue(isBalanced("()"));
+
+    // Partition 7: String with a combination of balanced symbols
+    assertTrue(isBalanced("{[()]}"));
+
+    // Partition 8: String with a combination of unbalanced symbols
+    assertFalse(isBalanced("[{()]"));
+
+    }
+
+3. Logic Coverage Evaluation (Base Choice Coverage):
+
+Le code de la fonction isBalanced est relativement simple, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons vérifier que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
+
+4. PIT Mutation Testing:
+
+Execution de PIT (mutation testing) sur les suites de tests existantes.
+
