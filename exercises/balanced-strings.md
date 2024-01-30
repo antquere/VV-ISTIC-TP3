@@ -48,59 +48,60 @@ Code de la méthode isBalanced(String str) :
         return stack.isEmpty(); // If stack is empty, all brackets were balanced
     }
 
-1. Input Space Partitioning :
+Partitionnement de l'Espace d'Entrée :
 
-   Presence of Symbols:
-   - Partition 1: String with no symbols (Empty String).
-    -Partition 2: String with balanced symbols.
-   - Partition 3: String with unbalanced symbols.
+Présence de Symboles :
+        Partition 1 : Chaîne de caractères sans symboles (Chaîne vide).
+        Partition 2 : Chaîne de caractères avec des symboles équilibrés.
+        Partition 3 : Chaîne de caractères avec des symboles déséquilibrés.
 
-   Types of Symbols:
-   - Partition 4: String with only curly braces {}.
-   - Partition 5: String with only square brackets [].
-   - Partition 6: String with only parentheses ().
+Types de Symboles :
+        Partition 4 : Chaîne de caractères avec uniquement des accolades {}.
+        Partition 5 : Chaîne de caractères avec uniquement des crochets [].
+        Partition 6 : Chaîne de caractères avec uniquement des parenthèses ().
 
-   Combination of Symbols:
-   - Partition 7: String with a combination of balanced symbols.
-   - Partition 8: String with a combination of unbalanced symbols.
+Combinaison de Symboles :
+        Partition 7 : Chaîne de caractères avec une combinaison de symboles équilibrés.
+        Partition 8 : Chaîne de caractères avec une combinaison de symboles déséquilibrés.
 
-2. Statement Coverage Evaluation :
+Évaluation de la Couverture des Instructions :
 
+java
 
-    @Test
-    public void testIsBalanced() {
-    
-    // Partition 1: Empty String
-    assertTrue(isBalanced(""));
+@Test
+public void testIsBalanced() {
 
-    // Partition 2: String with balanced symbols
-    assertTrue(isBalanced("{[]()}"));
+// Partition 1: Chaîne vide
+assertTrue(isBalanced(""));
 
-    // Partition 3: String with unbalanced symbols
-    assertFalse(isBalanced("([)]"));
+// Partition 2: Chaîne avec des symboles équilibrés
+assertTrue(isBalanced("{[]()}"));
 
-    // Partition 4: String with only curly braces
-    assertTrue(isBalanced("{}"));
+// Partition 3: Chaîne avec des symboles déséquilibrés
+assertFalse(isBalanced("([)]"));
 
-    // Partition 5: String with only square brackets
-    assertTrue(isBalanced("[]"));
+// Partition 4: Chaîne avec seulement des accolades
+assertTrue(isBalanced("{}"));
 
-    // Partition 6: String with only parentheses
-    assertTrue(isBalanced("()"));
+// Partition 5: Chaîne avec seulement des crochets
+assertTrue(isBalanced("[]"));
 
-    // Partition 7: String with a combination of balanced symbols
-    assertTrue(isBalanced("{[()]}"));
+// Partition 6: Chaîne avec seulement des parenthèses
+assertTrue(isBalanced("()"));
 
-    // Partition 8: String with a combination of unbalanced symbols
-    assertFalse(isBalanced("[{()]"));
+// Partition 7: Chaîne avec une combinaison de symboles équilibrés
+assertTrue(isBalanced("{[()]}"));
 
-    }
+// Partition 8: Chaîne avec une combinaison de symboles déséquilibrés
+assertFalse(isBalanced("[{()]"));
 
-3. Logic Coverage Evaluation (Base Choice Coverage):
+}
 
-Le code de la fonction isBalanced est relativement simple, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons vérifier que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
+Évaluation de la Couverture Logique (Couverture des Choix de Base) :
 
-4. PIT Mutation Testing:
+Le code de la fonction isBalanced est relativement simple, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons nous assurer que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
 
-Execution de PIT (mutation testing) sur les suites de tests existantes.
+Test de Mutation PIT :
+
+Exécution de PIT (test de mutation) sur les suites de tests existantes.
 
