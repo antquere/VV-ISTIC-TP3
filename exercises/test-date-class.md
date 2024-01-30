@@ -53,43 +53,50 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
-1. Input Space Partitioning :
+Partitionnement de l'Espace d'Entrée :
 
-Characteristics and Partition Blocks : Date(int day, int month, int year)
-- Valid date (common with isValidDate method)
-- Invalid date (common with isValidDate method)
+Caractéristiques et Blocs de Partition : Date(int jour, int mois, int année)
 
-Characteristics and Partition Blocks : isValidDate(int day, int month, int year)
-Valid date
-- Partition 1 : Normal valid date
-- Partition 2 : Leap year date (common with isLeapYear method)
-        
-Invalid date
-- Partition 3 : Invalid day
-- Partition 4 : Invalid month
-- Partition 5 : Invalid year
+Date valide (commune avec la méthode isValidDate)
+Date invalide (commune avec la méthode isValidDate)
 
-Characteristics and Partition Blocks : isLeapYear(int year)
-- Leap year
-- Non-leap year
+Caractéristiques et Blocs de Partition : isValidDate(int jour, int mois, int année)
 
-Characteristics and Partition Blocks : nextDate() and previousDate()
-- Normal date
-- Edge cases (start or end of a month, year)
+Date valide
 
-Characteristics and Partition Blocks : compareTo(Date other)
-- Date is posterior to other
-- Date is anterior to other
-- Date is the same as other
-- other is null
+Partition 1 : Date valide normale
+Partition 2 : Date bissextile (commune avec la méthode isLeapYear)
 
-2. Code dans la classe de tests.
+Date invalide
 
-3. Logic Coverage Evaluation (Base Choice Coverage):
+Partition 3 : Jour invalide
+Partition 4 : Mois invalide
+Partition 5 : Année invalide
 
-Le code des fonctions sont relativement simples, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons vérifier que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
+Caractéristiques et Blocs de Partition : isLeapYear(int année)
 
-4. PIT Mutation Testing:
+Année bissextile
+Année non bissextile
 
-Execution de PIT (mutation testing) sur les suites de tests existantes.
+Caractéristiques et Blocs de Partition : nextDate() et previousDate()
+
+Date normale
+Cas limites (début ou fin d'un mois, année)
+
+Caractéristiques et Blocs de Partition : compareTo(Date autre)
+
+La date est postérieure à une autre
+La date est antérieure à une autre
+La date est identique à une autre
+L'autre est nulle
+
+Code dans la classe de tests.
+
+Évaluation de la Couverture Logique (Couverture des Choix de Base):
+
+Le code des fonctions est relativement simple, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons nous assurer que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
+
+Test de Mutation PIT :
+
+Exécution de PIT (test de mutation) sur les suites de tests existantes.
 
