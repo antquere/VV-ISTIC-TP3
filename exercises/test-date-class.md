@@ -53,7 +53,7 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
-Partitionnement de l'Espace d'Entrée :
+1.    Partitionnement de l'Espace d'Entrée :
 
 Caractéristiques et Blocs de Partition : Date(int jour, int mois, int année)
 
@@ -90,13 +90,13 @@ La date est antérieure à une autre
 La date est identique à une autre
 L'autre est nulle
 
-Code dans la classe de tests.
+2.    Code dans la classe de tests.
 
-Évaluation de la Couverture Logique (Couverture des Choix de Base):
+3.    Évaluation de la Couverture Logique (Couverture des Choix de Base):
 
 Le code des fonctions est relativement simple, avec des conditions simples et peu de prédicats complexes. Cependant, nous devons nous assurer que chaque branche du code est couverte. Étant donné qu'il n'y a pas de prédicats complexes, la couverture de base devrait déjà être atteinte avec les tests fournis dans la réponse précédente.
 
-Test de Mutation PIT :
+4.    Test de Mutation PIT :
 
 Exécution de PIT (test de mutation) sur les suites de tests existantes.
 
