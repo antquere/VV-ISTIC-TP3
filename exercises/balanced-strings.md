@@ -51,18 +51,18 @@ Code de la méthode isBalanced(String str) :
 Partitionnement de l'Espace d'Entrée :
 
 Présence de Symboles :
-        Partition 1 : Chaîne de caractères sans symboles (Chaîne vide).
-        Partition 2 : Chaîne de caractères avec des symboles équilibrés.
-        Partition 3 : Chaîne de caractères avec des symboles déséquilibrés.
+Partition 1 : Chaîne de caractères sans symboles (Chaîne vide).
+Partition 2 : Chaîne de caractères avec des symboles équilibrés.
+Partition 3 : Chaîne de caractères avec des symboles déséquilibrés.
 
 Types de Symboles :
-        Partition 4 : Chaîne de caractères avec uniquement des accolades {}.
-        Partition 5 : Chaîne de caractères avec uniquement des crochets [].
-        Partition 6 : Chaîne de caractères avec uniquement des parenthèses ().
+Partition 4 : Chaîne de caractères avec uniquement des accolades {}.
+Partition 5 : Chaîne de caractères avec uniquement des crochets [].
+Partition 6 : Chaîne de caractères avec uniquement des parenthèses ().
 
 Combinaison de Symboles :
-        Partition 7 : Chaîne de caractères avec une combinaison de symboles équilibrés.
-        Partition 8 : Chaîne de caractères avec une combinaison de symboles déséquilibrés.
+Partition 7 : Chaîne de caractères avec une combinaison de symboles équilibrés.
+Partition 8 : Chaîne de caractères avec une combinaison de symboles déséquilibrés.
 
 Évaluation de la Couverture des Instructions :
 
